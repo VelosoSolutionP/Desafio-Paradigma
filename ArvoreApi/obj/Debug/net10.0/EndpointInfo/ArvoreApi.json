@@ -1,0 +1,94 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "ArvoreApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Arvore/construir": {
+      "post": {
+        "tags": [
+          "Arvore"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Node"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Node"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Node"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Node": {
+        "type": "object",
+        "properties": {
+          "valor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "esquerda": {
+            "$ref": "#/components/schemas/Node"
+          },
+          "direita": {
+            "$ref": "#/components/schemas/Node"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Arvore"
+    }
+  ]
+}

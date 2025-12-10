@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "ArvoreApi.Controllers.ArvoreController",
+    "Method": "Construir",
+    "RelativePath": "api/Arvore/construir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numeros",
+        "Type": "System.Int32[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ArvoreApi.Models.Node",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
